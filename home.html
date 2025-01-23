@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Predictor App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e90ff, #00fa9a);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+    		font-size: 60px;
+    		color: #ffffff; /* White text for better contrast */
+    		background: rgba(0, 0, 0, 0.7); /* Darker background for better visibility */
+    		padding: 15px 20px;
+    		border-radius: 10px;
+    		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    		margin-bottom: 30px;
+    		display: inline-block;
+		}
+
+        center {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 70%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        select, input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+            cursor: pointer;
+        }
+
+        .radio-group input {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00fa9a;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Predict Your Crop Yield</h1>
+        <form action="/check">
+            <!-- Dropdown for Rainfall -->
+            <label for="rain">Select Rainfall</label>
+            <select id="rain" name="rain" required>
+                <option value="0.1">100-200 mm</option>
+                <option value="0.2">201-300 mm</option>
+                <option value="0.3">301-400 mm</option>
+                <option value="0.4">401-500 mm</option>
+                <option value="0.5">501-600 mm</option>
+                <option value="0.6">601-700 mm</option>
+                <option value="0.7">701-800 mm</option>
+                <option value="0.8">801-900 mm</option>
+                <option value="0.9">901-1000 mm</option>
+            </select>
+
+            <!-- Dropdown for Temperature -->
+            <label for="temp">Select Temperature</label>
+            <select id="temp" name="temp" required>
+                <option value="0.1">15-20 Celsius</option>
+                <option value="0.3">20-25 Celsius</option>
+                <option value="0.5">25-30 Celsius</option>
+                <option value="0.7">30-35 Celsius</option>
+                <option value="0.9">35-40 Celsius</option>
+            </select>
+
+            <label for="harvest">Enter Days to Harvest</label>
+            <input type="number" id="harvest" step="any" name="harvest" placeholder="Days to harvest" required>
+            
+            <label>Which type of crop do you want to yield?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="c1" value="rice" required> Rice</label>
+                <label><input type="radio" name="c1" value="wheat"> Wheat</label>
+                <label><input type="radio" name="c1" value="soyabean"> Soyabean</label>
+                <label><input type="radio" name="c1" value="barley"> Barley</label>
+                <label><input type="radio" name="c1" value="maize"> Maize</label>
+                <label><input type="radio" name="c1" value="cotton"> Cotton</label>
+            </div>
+            
+            <label>What is the soil type?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="s1" value="chalky" required> Chalky</label>
+                <label><input type="radio" name="s1" value="clay"> Clay</label>
+                <label><input type="radio" name="s1" value="loam"> Loam</label>
+                <label><input type="radio" name="s1" value="silt"> Silt</label>
+                <label><input type="radio" name="s1" value="sandy"> Sandy</label>
+                <label><input type="radio" name="s1" value="peaty"> Peaty</label>
+            </div>
+            
+            <label>Which region are you in?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="r1" value="north" required> North</label>
+                <label><input type="radio" name="r1" value="south"> South</label>
+                <label><input type="radio" name="r1" value="west"> West</label>
+                <label><input type="radio" name="r1" value="east"> East</label>
+            </div>
+            
+            <label>What is the current weather condition?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="w1" value="rainy" required> Rainy</label>
+                <label><input type="radio" name="w1" value="cloudy"> Cloudy</label>
+                <label><input type="radio" name="w1" value="sunny"> Sunny</label>
+            </div>
+            
+            <label>Is irrigation used?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="ir1" value="yes" required> Yes</label>
+                <label><input type="radio" name="ir1" value="no"> No</label>
+            </div>
+            
+            <label>Is fertilizer used?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="fe1" value="yes" required> Yes</label>
+                <label><input type="radio" name="fe1" value="no"> No</label>
+            </div>
+            
+            <input type="submit" value="Check">
+        </form>
+    </center>
+</body>
+</html>
