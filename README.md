@@ -1,43 +1,58 @@
 Crop Yield Prediction Project
 Overview
-This repository contains two phases of a crop yield prediction project, aimed at predicting the yield of crops in tons per hectare based on various environmental and cultivation factors. The project utilizes both traditional machine learning models and big data processing with Apache Spark to address scalability and performance optimization.
+This repository contains the implementation of a crop yield prediction system, which uses machine learning models to predict the yield of crops in tons per hectare based on various environmental and cultivation factors. The project includes two main phases:
+
 Here is the link to the dataset used for this project :-
 https://www.kaggle.com/datasets/samuelotiattakorah/agriculture-crop-yield
 
+Machine learning model development and validation using Python and popular data science libraries.
+Integration with a Flask web application to allow users to interact with the model through a web interface.
 Files
-phase1and2.ipynb: Implements the preprocessing and machine learning models using Python libraries such as Pandas, Scikit-learn, and Matplotlib for data visualization.
-phase3.ipynb: Implements the data processing and analytics using Apache Spark, enhancing the capability to handle large datasets efficiently.
+phase1and2.ipynb: Machine learning implementation using Pandas, Scikit-learn, and Matplotlib for data visualization and model training.
+phase3.ipynb: Enhancement of the project using Apache Spark to handle larger datasets and improve processing efficiency.
+app.py: Flask application that serves a web interface for the crop yield prediction model.
+home.html, styles.css: Frontend files for the web application providing a user-friendly interface for data input and display of the prediction results.
 Phase 1 and 2: Machine Learning Implementation
 Description
-In the initial phases, the project focuses on:
+These phases focus on:
 
-Data cleaning and preprocessing to prepare the dataset for model training.
-Exploratory data analysis (EDA) to understand the dataset's characteristics.
-Training machine learning models including Linear Regression, K-Nearest Neighbors, and Naive Bayes to predict crop yields.
+Preprocessing the data to prepare it for machine learning.
+Performing exploratory data analysis to uncover insights from the data.
+Training and evaluating models such as Linear Regression, K-Nearest Neighbors, and Naive Bayes.
 Technologies Used
 Python
 Pandas for data manipulation
 Matplotlib and Seaborn for data visualization
-Scikit-learn for implementing machine learning models
+Scikit-learn for building machine learning models
 Phase 3: Apache Spark Implementation
 Description
-To handle larger datasets and improve computational efficiency, the project scales up using Apache Spark:
+Leverages Apache Spark for:
 
-Utilizes Spark SQL for data ingestion and preprocessing.
-Employs Spark's DataFrame API to perform data transformations and aggregations efficiently.
-Implements feature engineering and machine learning within the Spark ecosystem to ensure scalability.
+Efficient data handling and processing of large datasets.
+Utilizing Spark SQL and DataFrame API for data transformations and aggregations.
+Integrating machine learning pipelines in a distributed environment.
 Technologies Used
 Apache Spark
-PySpark for Spark's Python API
-Spark SQL for data querying
-Getting Started
-To run these notebooks:
+PySpark
+Flask Web Application
+Description
+The Flask app provides a web interface to interact with the machine learning model. Users can input parameters such as rainfall, temperature, crop type, soil type, and other factors to receive a prediction on crop yield.
 
-Ensure you have Python installed, along with Jupyter Notebooks or JupyterLab.
-For phase1and2.ipynb, install the required Python packages using pip install pandas matplotlib seaborn scikit-learn.
-For phase3.ipynb, Apache Spark needs to be set up along with PySpark. Follow the official Spark installation guide.
+Setup
+Run pip install flask to install Flask.
+Use python app.py to start the web server.
+Open a web browser and go to http://127.0.0.1:5000/ to view the application.
+Technologies Used
+Flask for the web framework.
+HTML/CSS for the frontend.
+Getting Started
+To set up and run the project:
+
+Ensure Python is installed.
+Install required libraries using pip install pandas matplotlib seaborn scikit-learn pyspark flask.
+Follow instructions in the Flask Web Application section to launch the web interface.
 Contribution
-Contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome. Please open an issue first to discuss what you would like to change.
 
 License
 Distributed under the MIT License. See LICENSE for more information.
