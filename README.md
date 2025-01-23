@@ -8,8 +8,8 @@ https://www.kaggle.com/datasets/samuelotiattakorah/agriculture-crop-yield
 Machine learning model development and validation using Python and popular data science libraries.
 Integration with a Flask web application to allow users to interact with the model through a web interface.
 Files
-phase1and2.ipynb: Machine learning implementation using Pandas, Scikit-learn, and Matplotlib for data visualization and model training.
-phase3.ipynb: Enhancement of the project using Apache Spark to handle larger datasets and improve processing efficiency.
+code_using_ml.ipynb: Machine learning implementation using Pandas, Scikit-learn, and Matplotlib for data visualization and model training.
+code_using_spark.ipynb: Enhancement of the project using Apache Spark to handle larger datasets and improve processing efficiency.
 app.py: Flask application that serves a web interface for the crop yield prediction model.
 home.html, styles.css: Frontend files for the web application providing a user-friendly interface for data input and display of the prediction results.
 Phase 1 and 2: Machine Learning Implementation
