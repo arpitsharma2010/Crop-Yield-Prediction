@@ -98,7 +98,11 @@ pip install pandas matplotlib seaborn scikit-learn pyspark flask
 ### **Running the Project**
 1. Train the machine learning model using `code_using_ml.ipynb`.
 2. (Optional) Use `code_using_spark.ipynb` for large-scale data processing.
-3. Run `app.py` to start the **Flask web application**.
+3. Download the trained model from the link below and place it in the project directory:
+   ``` url
+   https://drive.google.com/drive/folders/1Fxqluo2iR2CVvoqogZqUTfcZmMlomgwW?usp=sharing
+   ```
+4. Run `app.py` to start the **Flask web application**.
 
 ---
 
