@@ -102,7 +102,8 @@ pip install pandas matplotlib seaborn scikit-learn pyspark flask
    ``` url
    https://drive.google.com/drive/folders/1Fxqluo2iR2CVvoqogZqUTfcZmMlomgwW?usp=sharing
    ```
-4. Run `app.py` to start the **Flask web application**.
+4. Unzip the folder and place the unzipped file at the root folder.
+5. Run `app.py` to start the **Flask web application**.
 
 ---
 
