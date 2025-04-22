@@ -12,6 +12,11 @@ This repository contains the implementation of a **Crop Yield Prediction System*
 3. **Flask Web Application**  
    - Provides an interactive web interface for users to input data and receive crop yield predictions.
 
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Apache Spark](https://img.shields.io/badge/Apache%20Spark-MLlib-orange)
+![Flask](https://img.shields.io/badge/Flask-WebApp-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ### Dataset  
 The dataset used in this project can be accessed at:  
 [📂 Kaggle Dataset - Agriculture Crop Yield](https://www.kaggle.com/datasets/samuelotiattakorah/agriculture-crop-yield)
@@ -35,7 +40,7 @@ The dataset used in this project can be accessed at:
 These phases focus on:
 - **Data Preprocessing**: Cleaning and preparing data for model training.
 - **Exploratory Data Analysis (EDA)**: Understanding the dataset through visualizations.
-- **Model Training & Evaluation**: Implementing **Linear Regression, K-Nearest Neighbors (KNN), and Naive Bayes**.
+- **Model Training & Evaluation**: Implemented and compared **Linear Regression, K-Nearest Neighbors (KNN), Naive Bayes, Decision Tree, Random Forest, ElasticNet, and XGBoost** for crop yield prediction.
 
 ### **Technologies Used**
 - **Python**
